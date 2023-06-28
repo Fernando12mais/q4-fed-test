@@ -45,7 +45,6 @@ const button = document.querySelector("#btn-load-reports");
 button.addEventListener("click", function () {
   data = data.concat(reportData.slice(data.length - 1, 6));
 
-  console.log(data);
   reportsWidget.renderReports(data);
 
   if (data.length == reportData.length) {
