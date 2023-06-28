@@ -1,64 +1,112 @@
-* {
+*,
+::after,
+::before {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-#q4Wrapper {
-  background-color: #2A3035;
+body {
+  background-color: #2a3035;
   font-family: "Roboto", sans-serif;
-  color: white;
+  color: #ffffff;
 }
-#q4Wrapper h1, #q4Wrapper h3 {
-  margin: 0;
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
 }
-#q4Wrapper h1 {
+
+main > header {
+  background-color: #22272b;
+  padding: 4px 32px;
+  margin: 32px auto;
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
   font-size: 48px;
 }
-#q4Wrapper h3 {
-  font-size: 14px;
-  line-height: 20px;
-  text-transform: uppercase;
+
+.reports {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  gap: 30px;
+  width: 100%;
+  padding: 0 16px;
 }
-#q4Wrapper header, #q4Wrapper footer {
-  background-color: #22272B;
+
+.wrapper-reports {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
-#q4Wrapper header {
-  padding: 20px;
-}
-#q4Wrapper footer {
-  margin-top: 10px;
-  padding: 10px;
-  border-radius: 5px;
-}
-#q4Wrapper article {
+
+.wrapper-reports article {
   text-align: center;
 }
-#q4Wrapper article img {
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+.wrapper-reports article img {
+  text-align: center;
+  box-shadow: 0 0.3125rem 0.625rem rgba(0, 0, 0, 0.25);
 }
-#q4Wrapper a {
+.wrapper-reports a {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+  text-align: center;
+  box-shadow: 0 0.3125rem 0.625rem rgba(0, 0, 0, 0.25);
   display: inline-block;
   text-decoration: none;
-  color: white;
+  color: var(--content-color);
   transition: transform 0.3s ease;
 }
-#q4Wrapper a:hover {
+
+.wrapper-reports a:hover {
   transform: scale(1.05);
 }
-#q4Wrapper a span {
+.wrapper-reports a span {
   opacity: 0.5;
 }
 
-.layout_inner {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 30px 20px;
-}
-.layout_header {
-  margin-bottom: 30px;
-  text-align: center;
+.wrapper-reports footer {
+  margin-top: 0.625rem;
+  padding: 0.625rem 0.75rem;
+  border-radius: 0.3125rem;
+  background-color: #22272b;
 }
 
-/* Begin styling the report items here! */
-.reports {
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
 
+.btn-load-reports {
+  padding: 1rem;
+  background-color: #22272b;
+  color: #ffffff;
+  border: none;
+  transition: transform 0.5s;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+.btn-load-reports:hover {
+  transform: scale(1.06);
+}
+
+@media (max-width: 768px) {
+  .reports {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .reports {
+    grid-template-columns: auto;
+    justify-content: center;
+  }
 }
