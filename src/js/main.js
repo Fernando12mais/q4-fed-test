@@ -3,24 +3,23 @@ var data = [];
 var reportsWidget = {
   options: {
     containerSelector: ".reports",
-    template: `{{#.}}
-                <article>
-                    <a href="{{cover}}" target="_blank">
-                        <img  src="{{cover}}" alt="{{title}} Cover"/>
-                    </a>
-                    <footer >
-                        {{#documents}}
-                            <h3>
-                                <a href="{{url}}" target="_blank">{{title}} 
-                                <span>({{file_size}} {{file_type}})</span>
-                                
-                                </a>
-                      
-                            </h3>
-                        {{/documents}} 
-                    </footer>
-                </article> 
-            {{/.}}`,
+    template:
+      "{{#.}}" +
+      "<article>" +
+      ' <a href="{{cover}}" target="_blank">' +
+      ' <img  src="{{cover}}" alt="{{title}} Cover"/>' +
+      " </a>" +
+      "  <footer >" +
+      "  {{#documents}}" +
+      " <h3>" +
+      ' <a href="{{url}}" target="_blank">{{title}} ' +
+      "<span>({{file_size}} {{file_type}})</span>" +
+      "  </a>" +
+      "    </h3>" +
+      "  {{/documents}} " +
+      "  </footer>" +
+      " </article> " +
+      "{{/.}}",
   },
 
   init: function () {
