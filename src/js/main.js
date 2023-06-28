@@ -42,7 +42,9 @@ reportsWidget.init();
 
 const button = document.querySelector("#btn-load-reports");
 
-button.addEventListener("click", function () {
+button.addEventListener("click", loadMoreReports);
+
+function loadMoreReports() {
   data = data.concat(reportData.slice(data.length - 1, 6));
 
   reportsWidget.renderReports(data);
@@ -50,4 +52,4 @@ button.addEventListener("click", function () {
   if (data.length == reportData.length) {
     button.style.display = "none";
   }
-});
+}
