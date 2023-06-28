@@ -30,8 +30,10 @@ h1 {
 }
 
 .reports {
+  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: repeat(3, 1fr);
   justify-content: space-between;
   gap: 1.875rem;
   width: 100%;
@@ -101,6 +103,7 @@ h1 {
 @media (max-width: 768px) {
   .reports {
     grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: repeat(2, 1fr);
   }
 }
 
@@ -108,5 +111,6 @@ h1 {
   .reports {
     grid-template-columns: auto;
     justify-content: center;
+    -ms-grid-columns: auto;
   }
 }
